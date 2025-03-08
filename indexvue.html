@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>   
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero card">
+        <img src="Imagens/perfil.jpg" alt="Minha Foto" class="foto">
+        <div class="info">
+            <h2 class="titulo-home">Desenvolvedor</h2>
+            <br>
+            
+            <p>Entre em contato:</p>
+            <div class="contatos">
+                
+                <a href="https://www.linkedin.com/in/joaogabrielrlp/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/JoaoGabrielRLP" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://joaogabrielrlp.github.io/portfolio/" target="_blank">
+                    <i class="fa-solid fa-address-card"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="sobre" class="sobre card">
+        <h2>Sobre Mim</h2>
+        <br>
+        <p>Atualmente, atuo como Analista de Suporte em Tecnologia, onde desenvolvi habilidades essenciais como resolução de problemas, pensamento crítico e criatividade. Essa experiência tem sido fundamental para minha transição para a área de desenvolvimento de software, permitindo que eu compreenda melhor as necessidades dos usuários e proponha soluções eficientes.</p>
+
+        <br>
+
+        <p>Participei de projetos nos quais identifiquei problemas e desenvolvi ou documentei soluções, visando otimizar e facilitar o atendimento no suporte.</p>
+
+        <br>
+            
+        <p>Tenho experiência em desenvolvimento web e back-end, com projetos disponíveis no meu GitHub. No desenvolvimento web, utilizo HTML, CSS e JavaScript, além de frameworks como Bootstrap e Vue.js para criar interfaces modernas e responsivas. No back-end, trabalho com PHP, Java, C e bancos de dados SQL, garantindo a estrutura e a lógica por trás das aplicações.</p>
+
+        <br>
+            
+        <p>Meu objetivo é crescer na área de desenvolvimento de software e aplicativos, aplicando minhas habilidades para contribuir com soluções inovadoras e impactantes.</p>
+    </section>
+    
+    <section id="skills" class="tecnologias card">
+        <h2>Habilidades</h2>
+        <div class="skills">
+            <img align="center" alt="Joao-html" height="90" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+            <img align="center" alt="Joao-css3" height="90" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+            <img align="center" alt="Joao-bootstrap" height="90" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
+            <img align="center" alt="Joao-js" height="90" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+            <img align="center" alt="Joao-js" height="90" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" />
+            <img align="center" alt="Joao-Angular" height="90" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" />          
+            <img align="center" alt="Joao-php" height="90" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg"/>
+            <img align="center" alt="Joao-mysql" height="90" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
+            <img align="center" alt="Joao-mysql" height="90" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" />
+            <img align="center" alt="Joao-mysql" height="90" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
+        </div>
+    </section>
+    
+    <section id="app" class="projetos card">
+        <h2>Meus Projetos</h2>
+        <div v-for="projeto in projetos" :key="projeto.id" class="card projeto">
+            <img :src="projeto.imagem" :alt="projeto.titulo">
+            <h3>{{ projeto.titulo }}</h3>
+            <p>{{ projeto.descricao }}</p>
+            <div class="icones">
+                <i v-for="icone in projeto.icones" :key="icone" :class="icone"></i>
+            </div>
+            <a :href="projeto.linkSite" target="_blank" class="botao">Ver Site</a>
+            <a :href="projeto.linkRepo" target="_blank" class="botao">Repositório</a>
+        </div>
+    </section>
+    
+    <footer id="contato" class="card">
+        <h2>Contato</h2>
+        <div class="contatos">
+           
+            <div class="contato-item">
+                
+                <a href="mailto:joaogbriellopespereira@hotmail.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                    <span>joaogbriellopespereira@hotmail.com</span>
+                </a>
+            </div> 
+        </div>
+    </footer>
+
+   
+</body>
+</html>
