@@ -128,7 +128,7 @@ nav ul li a:hover {
 
 @media (max-width: 480px) {
     .hero .foto {
-        width: 40vw; /* Aumenta ainda mais a largura em dispositivos muito pequenos */
+        width: 20vw; /* Aumenta ainda mais a largura em dispositivos muito pequenos */
     }
 }
 
@@ -236,6 +236,7 @@ footer {
     display: flex;
     flex-direction: column; /* Coloca itens na vertical */
     align-items: center; /* Centraliza o conteúdo */
+    
 }
 
 footer h2 {
@@ -246,6 +247,7 @@ footer .contatos {
     display: flex;
     flex-direction: column; /* Coloca itens na vertical */
     gap: 10px; /* Espaço entre os itens */
+    text-align: center;
 }
 
 footer .contato-item {
@@ -256,8 +258,13 @@ footer .contato-item {
     border-radius: 5px;
     
 }
-
 footer .contato-item a{
     text-decoration: none;
     color: #fff
+}
+
+@media (max-width: 480px) {
+    footer span {
+        display: none; /* Aumenta ainda mais a largura em dispositivos muito pequenos */
+    }
 }
