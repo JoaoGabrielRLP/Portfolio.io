@@ -90,8 +90,12 @@
     </section>
     
     <section id="app" class="projetos card">
-        <h2>Meus Projetos</h2>
-        <div v-for="projeto in projetos" :key="projeto.id" class="card projeto">
+        <div class="titulo-projeto">
+            <h2>Meus Projetos</h2>
+        </div>
+        
+    <div class="lista-projetos">
+        <div v-for="projeto in projetos" :key="projeto.id" class="projeto">
             <img :src="projeto.imagem" :alt="projeto.titulo">
             <h3>{{ projeto.titulo }}</h3>
             <p>{{ projeto.descricao }}</p>
@@ -101,6 +105,7 @@
             <a :href="projeto.linkSite" target="_blank" class="botao">Ver Site</a>
             <a :href="projeto.linkRepo" target="_blank" class="botao">Repositório</a>
         </div>
+    </div>
     </section>
     
     <footer id="contato" class="card">

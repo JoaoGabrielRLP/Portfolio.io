@@ -93,6 +93,9 @@ nav ul li a:hover {
 }
 
 /* Cards */
+
+
+
 .card {
     background-color: #1f1f1f;
     padding: 40px;
@@ -173,6 +176,27 @@ nav ul li a:hover {
 }
 
 /* Projetos */
+.projetos {
+    display: flex;
+    flex-direction: column; /* Mantém o título acima dos projetos */
+    align-items: center; /* Centraliza o conteúdo */
+    gap: 30px; /* Adiciona espaçamento entre os elementos */
+}
+
+
+.titulo-projeto {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px; /* Espaçamento entre o título e os cards */
+}
+
+.lista-projetos {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    justify-content: center; /* Centraliza os projetos */
+    gap: 20px; /* Espaço entre os cards */
+}
+
 
 
 .projetos .projeto {
