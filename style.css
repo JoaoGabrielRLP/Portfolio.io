@@ -214,6 +214,22 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
+.projeto p {
+    max-height: 4.5em; /* Aproximadamente 3 linhas de texto */
+    overflow-y: auto;
+    padding-right: 5px; /* Evita que o texto fique colado na borda */
+    text-align: justify;
+}
+
+.projeto p::-webkit-scrollbar {
+    width: 5px;
+}
+
+.projeto p::-webkit-scrollbar-thumb {
+    background-color: #800080; /* Cor da barra */
+    border-radius: 5px;
+}
+
 .projeto a {
     display: flex;
     justify-content: center;

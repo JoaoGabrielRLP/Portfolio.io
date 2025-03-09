@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         id: 1,
                         imagem: "Imagens/transportes318/landingpage.png",
                         titulo: "318 Transportes",
-                        descricao: "Uma landing page que desenvolvi pensando na área de transportes do meu amigo",
+                        descricao: "Uma landing page que desenvolvi pensando na empresa de transportes de meu amigo ",
                         icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt"],
                         linkSite: "https://joaogabrielrlp.github.io/318.transportes.io/",
                         linkRepo: "https://github.com/JoaoGabrielRLP/318.transportes.io.git"
