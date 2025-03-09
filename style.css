@@ -122,6 +122,10 @@ nav ul li a:hover {
     order: 2; /* A foto flutua à direita */
 }
 
+.contatos i {
+    display: inline-block;
+}
+
 /* Ajustes para telas menores */
 @media (max-width: 768px) {
     .hero .foto {
