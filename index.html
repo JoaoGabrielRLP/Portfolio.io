@@ -97,6 +97,7 @@
     <div class="lista-projetos">
         <div v-for="projeto in projetos" :key="projeto.id" class="projeto">
             <img :src="projeto.imagem" :alt="projeto.titulo">
+            <br>
             <h3>{{ projeto.titulo }}</h3>
             <br>
             <p>{{ projeto.descricao }}</p>
