@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         imagem: "Imagens/WeatherApp/WeatherApp.png",
                         titulo: "Clima App",
                         descricao: "Este é um aplicativo web simples de previsão do tempo que permite aos usuários pesquisar pelo clima de qualquer cidade em tempo real. Ele usa a API do OpenWeatherMap para obter informações como temperatura, descrição do clima, umidade e velocidade do vento.",
-                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt"],
+                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-js"],
                         linkSite: "https://joaogabrielrlp.github.io/ClimaApp.io/",
                         linkRepo: "https://github.com/JoaoGabrielRLP/SybaseLogManager"
                     }
