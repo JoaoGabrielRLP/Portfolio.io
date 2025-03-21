@@ -98,6 +98,7 @@
         <div v-for="projeto in projetos" :key="projeto.id" class="projeto">
             <img :src="projeto.imagem" :alt="projeto.titulo">
             <h3>{{ projeto.titulo }}</h3>
+            <br>
             <p>{{ projeto.descricao }}</p>
             <div class="icones">
                 <i v-for="icone in projeto.icones" :key="icone" :class="icone"></i>
