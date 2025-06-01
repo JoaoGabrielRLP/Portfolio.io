@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio João Gabriel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script> 
+    <script src="lightmode.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            
+                <label for="menu-toggle" class="menu-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+                <img src="Imagens/logo.png" alt="" width="300px">  
+                                     
+            <ul>                
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#app">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            
+            
+            <button id="toggle-theme" class="botao-tema">🌙</button>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero card">
+        <img src="Imagens/perfil.jpg" alt="Minha Foto" class="foto">
+        <div class="info">
+            <h2 class="titulo-home">Desenvolvedor Full Stack</h2>
+            
+        </div>
+    </section>
+    
+    <section id="sobre" class="sobre card">
+        <h2>Sobre Mim</h2>
+        <br>
+        
+        <p>Tenho experiência em desenvolvimento web e back-end, com projetos disponíveis no meu GitHub. No desenvolvimento web, utilizo <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>, além de frameworks como <strong>Bootstrap</strong>, <strong>Vue.js</strong> e <strong>Angular</strong> para criar interfaces modernas e responsivas. No back-end, trabalho com <strong>PHP</strong>, <strong>Java</strong>, <strong>C</strong> e bancos de dados <strong>SQL</strong>, garantindo a estrutura e a lógica por trás das aplicações.</p>
+
+        <br>
+        
+        <p>Participei de projetos nos quais identifiquei problemas e desenvolvi ou documentei soluções, visando otimizar e facilitar procedimentos técnicos ou desenvolver landing pages para empresas.</p>
+
+        <br>
+
+        <p>Minhas redes:</p>
+            <div class="contatos">
+                
+                <a href="https://www.linkedin.com/in/joaogabrielrlp/" style="display: inline-block;" target="_blank">
+                    <i class="fa-brands fa-linkedin" alt="Linkedin"></i>
+                </a>
+                <a href="https://github.com/JoaoGabrielRLP" style="display: inline-block;" target="_blank">
+                    <i class="fab fa-github" alt="Github"></i>
+                </a>
+                <a href="https://joaogabrielrlp.github.io/cartao_visitas/" target="_blank">
+                    <i class="fa-solid fa-address-card" alt="Cartão de visitas"></i>
+                </a>
+            </div>
+       <br>
+      <a href="Currículo João Gabriel.pdf" download class="botao">Baixar currículo</a>
+     
+        
+    </section>
+    
+    <section id="skills" class="tecnologias card">
+        <h2>Tecnologias</h2>
+      
+        <div class="grupo-tecnologias">
+          <h3>Front-end</h3>
+          <div class="skills">
+            <div class="tech-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+              <span>HTML</span>
+            </div>
+            <div class="tech-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+              <span>CSS</span>
+            </div>
+            <div class="tech-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+              <span>Bootstrap</span>
+            </div>
+            <div class="tech-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js">
+              <span>Vue.js</span>
+            </div>
+            <div class="tech-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" alt="Angular">
+              <span>Angular</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="grupo-tecnologias">
+          <h3>Back-end</h3>
+          <div class="skills">
+            <div class="tech-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" alt="PHP">
+              <span>PHP</span>
+            </div>
+            <div class="tech-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL">
+              <span>MySQL</span>
+            </div>
+            <div class="tech-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt="Java">
+              <span>Java</span>
+            </div>
+            <div class="tech-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+              <span>C</span>
+            </div>
+            <div class="tech-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python">
+              <span>Python</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+    <section id="app" class="projetos card">
+        <div class="titulo-projeto">
+            <h2>Meus Projetos</h2>
+        </div>
+        
+    <div class="lista-projetos">
+        <div v-for="projeto in projetos" :key="projeto.id" class="projeto">
+            <img :src="projeto.imagem" :alt="projeto.titulo">
+            <br>
+            <h3>{{ projeto.titulo }}</h3>
+            <br>
+            <p>{{ projeto.descricao }}</p>
+            <div class="icones">
+                <i v-for="icone in projeto.icones" :key="icone" :class="icone"></i>
+            </div>
+            <a v-if="projeto.linkSite" :href="projeto.linkSite" target="_blank" class="botao">Ver Site</a>
+            <a :href="projeto.linkRepo" target="_blank" class="botao">Repositório</a>
+        </div>
+    </div>
+    </section>
+    
+    <footer id="contato" class="card">
+        <h2>Contato</h2>
+        <div class="contatos">
+            
+            <div class="contato-item">
+                
+                <a href="mailto:joaogbriellopespereira@hotmail.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                    <span>joaogbriellopespereira@hotmail.com</span>
+                </a>
+            </div> 
+        </div>
+    </footer>
+    
+   
+</body>
+</html>
