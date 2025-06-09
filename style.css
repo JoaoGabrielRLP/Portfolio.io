@@ -28,6 +28,12 @@ nav {
     position: relative; /* Permite que o menu seja posicionado */
 }
 
+nav img {
+    max-height: 60px;
+    height: auto;
+    width: auto;
+}
+
 nav .menu-toggle {
     display: none; /* Oculta o checkbox */
 }
@@ -75,6 +81,10 @@ nav ul li a:hover {
         display: flex; /* Mostra o botão de menu em telas menores */
     }
 
+    nav img {
+        max-height: 40px;
+    }
+
     nav ul {
         display: none; /* Oculta a lista de navegação */
         flex-direction: column; /* Coloca os itens em coluna */
@@ -86,8 +96,12 @@ nav ul li a:hover {
         z-index: 1; /* Coloca o menu acima do conteúdo */
     }
 
+    body.light nav ul{
+        background-color: white;
+    }
+
     /* Exibe a lista de navegação quando o checkbox estiver marcado */
-    nav .menu-toggle:checked + .menu-icon + ul {
+    nav .menu-toggle:checked ~ ul{
         display: flex; /* Exibe a lista de navegação */
     }
 }
@@ -122,9 +136,6 @@ nav ul li a:hover {
     order: 2; /* A foto flutua à direita */
 }
 
-.contatos i {
-    display: inline-block;
-}
 
 /* Ajustes para telas menores */
 @media (max-width: 768px) {
@@ -149,11 +160,11 @@ nav ul li a:hover {
     -webkit-text-fill-color: transparent;
 }
 
-.hero .contatos {
+.sobre .contatos {
     margin-top: 10px; /* Espaço acima dos ícones */
 }
 
-.hero .contatos a {
+.sobre .contatos a {
     margin-right: 25px; /* Espaço entre os ícones */
     color: inherit; /* Mantém a cor padrão */
     font-size: 30px; /* Tamanho dos ícones */
@@ -270,6 +281,93 @@ nav ul li a:hover {
 .botao:hover {
     background: linear-gradient(to right, #6a0080, #ff1493);
 }
+
+/* Cards de tecnologia */
+.tech-card {
+    display: inline-block;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    width: 100px;
+    height: 120px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.tech-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.tech-card span {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: inherit;
+}
+
+.tech-card:hover {
+    transform: scale(1.1);
+    background-color: #444;
+}
+
+.grupo-tecnologias h3 {
+    text-align: left;
+    margin-top: 30px;
+    color: #ff69b4;
+}
+
+/* Botão de tema */
+.botao-tema {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/* Tema claro */
+body.light {
+    background-color: #f2f2f2;
+    color: #181818;
+}
+
+body.light nav,
+body.light nav ul li a,
+body.light .card,
+body.light .grupo-tecnologias,
+body.light .skills,
+body.light footer {
+    background-color: #fff;
+    color: #000;
+}
+
+body.light .tech-card {
+    background-color: #e2e2e2;
+}
+
+body.light .tech-card:hover {
+    background-color: #ccc;
+}
+
+body.light .botao-tema {
+    color: #181818;
+}
+
+body.light .projeto{
+    background-color: #f2f2f2
+}
+
+body.light nav ul li a:hover{
+    color: #ff69b4;
+}
+
+body.light nav .menu-icon .bar{
+    background-color: black;
+}
+
 
 /* Footer */
 footer {
