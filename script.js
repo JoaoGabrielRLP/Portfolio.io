@@ -42,7 +42,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-js"],
                         linkSite: "https://joaogabrielrlp.github.io/ClimaApp.io/",
                         linkRepo: "https://github.com/JoaoGabrielRLP/SybaseLogManager"
+                    },
+
+                    {
+                        id: 5,
+                        imagem: "Imagens/SGD-Notifier/Extensao.gif",
+                        titulo: "SGD-Assistente-de-Chamados",
+                        descricao: "O SGD Assistente de Chamados é uma extensão desenvolvida para auxiliar equipes de suporte a gerenciar melhor suas tarefas do dia. O foco principal está no controle de horários de pico, ajudando os técnicos a se organizarem por meio de notificações inteligentes e criação de tarefas personalizadas.",
+                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-js"],
+                        linkRepo: "https://github.com/JoaoGabrielRLP/SGD-Assistente-de-Chamados"
                     }
+
                 ]
             };
         }
