@@ -150,18 +150,24 @@
             <img :src="projeto.imagem" :alt="projeto.titulo">
             <br>
             <h3>{{ projeto.titulo }}</h3>
-            <br>
-            <p>{{ projeto.descricao }}</p>
+            
+            <hr class="divisor-projeto">
+            
             <div class="icones">
                 <i v-for="icone in projeto.icones" :key="icone" :class="icone"></i>
             </div>
-            <a v-if="projeto.linkSite" :href="projeto.linkSite" target="_blank" class="botao">Ver Site</a>
-            <a :href="projeto.linkRepo" target="_blank" class="botao">Repositório</a>
+            
+            <p>{{ projeto.descricao }}</p>
+            
+            <div class="botoes-container">
+                <a v-if="projeto.linkSite" :href="projeto.linkSite" target="_blank" class="botao">Ver Site</a>
+                <a :href="projeto.linkRepo" target="_blank" class="botao">Repositório</a>
+            </div>
         </div>
     </div>
     </section>
     
-    <footer id="contato" class="card">
+   <footer id="contato" class="card">
         <h2>Contato</h2>
         <div class="contatos">
             
@@ -173,6 +179,8 @@
                 </a>
             </div> 
         </div>
+        
+        <p class="assinatura">Desenvolvido por João Gabriel © 2026</p>
     </footer>
     
    

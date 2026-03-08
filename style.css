@@ -181,19 +181,40 @@ nav ul li a:hover {
     text-align: justify;
 }
 
-.icones {
+/* --- ESTILO DA LINHA DIVISÓRIA --- */
+.divisor-projeto {
+    border: 0;
+    height: 1px;
+    background-color: #444; /* Cinza para o tema escuro */
     margin: 10px 0;
-    width: 100%;
-    padding: 5px;
-    display: inline-block;
-    text-align: center;
+}
+
+body.light .divisor-projeto {
+    background-color: #ddd; /* Cinza leve para o tema claro */
+}
+
+/* --- AJUSTE DOS ÍCONES --- */
+.icones {
+    display: flex;
+    gap: 12px; /* Espaço uniforme entre os ícones */
+    margin: 0 0 15px 0;
+    justify-content: flex-start; /* Alinha à esquerda */
+    padding: 0;
 }
 
 .icones i {
-    width: 10px;
-    margin: 10px 50px 10px 10px;
-    font-size: 60px;
+    font-size: 24px; /* Tamanho profissional e discreto */
+    margin: 0; /* Remove as margens gigantes de antes */
+    width: auto;
 }
+
+/* --- CORES DAS TECNOLOGIAS (FontAwesome) --- */
+.fa-html5 { color: #E34F26; }
+.fa-css3-alt { color: #1572B6; }
+.fa-js { color: #F7DF1E; }
+.fa-bootstrap { color: #7952B3; }
+.fa-python { color: #3776AB; }
+/* Se adicionar novas linguagens no futuro, basta criar a classe correspondente aqui com a cor hexadecimal */
 
 .projetos {
     display: flex;
@@ -223,20 +244,44 @@ nav ul li a:hover {
     max-width: 400px;
     border-radius: 10px;
     text-align: left;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de elevação profissional ao passar o mouse */
+.projetos .projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .projeto img {
     width: 100%;
+    aspect-ratio: 16 / 9; /* Mantém um padrão visual de monitor/tela */
+    object-fit: cover; /* Preenche o espaço cortando o excesso, sem amassar a imagem */
     border-radius: 10px;
+    border: 1px solid #444; /* Borda sutil para dar acabamento */
+}
+
+.botoes-container {
+    display: flex;
+    gap: 15px; /* Espaço entre os botões */
+    margin-top: auto; /* Esta é a peça-chave: empurra a div inteira para o fundo do card */
+    padding-top: 15px;
+}
+
+.botoes-container a.botao {
+    flex: 1; /* Faz com que ambos os botões ocupem 50% do espaço cada */
+    text-align: center;
+    margin: 0; /* Reseta margens antigas do botão */
 }
 
 .projeto p {
     max-height: 4.5em;
     overflow-y: auto;
     padding-right: 5px;
-    text-align: justify;
+    text-align: left; /* Modificado de justify para left */
 }
-
 .projeto p::-webkit-scrollbar {
     width: 5px;
 }
@@ -260,14 +305,15 @@ nav ul li a:hover {
 
 .skills {
     background-color: #1f1f1f;
-    padding: 40px;
+    padding: 40px 20px; /* Padding lateral reduzido para 20px */
     margin: auto;
     width: 100%;
     max-width: 1050px;
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Gerencia o espaço entre os cards */
 }
-
 .botao {
     display: inline-block;
     background: linear-gradient(to right, #800080, #ff69b4);
@@ -283,12 +329,10 @@ nav ul li a:hover {
 }
 
 .tech-card {
-    display: inline-block;
     background-color: #2a2a2a;
     border-radius: 10px;
     width: 100px;
     height: 120px;
-    margin: 10px;
     padding: 10px;
     text-align: center;
     transition: transform 0.2s ease, background-color 0.3s;
@@ -390,7 +434,44 @@ footer .contato-item a {
     color: #fff;
 }
 
+/* --- ASSINATURA DO FOOTER --- */
+.assinatura {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #888;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+body.light .assinatura {
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+
 @media (max-width: 480px) {
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center; /* Centraliza o card dentro da sua própria coluna */
+        padding: 20px 10px;
+    }
+    
+    .tech-card {
+        width: 100%;
+        max-width: 110px; /* Evita que o card fique esticado demais em telas um pouco maiores */
+    }
+
+    .botoes-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .botoes-container a.botao {
+        width: 100%;
+    }
+
     footer span {
         display: none;
     }
