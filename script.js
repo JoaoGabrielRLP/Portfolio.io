@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         id: 1,
                         imagem: "Imagens/BuscaRepo/Img.jpeg",
                         titulo: "BuscaRepositorios",
-                        descricao: "O BuscaRepositorios é uma ferramenta desenvolvida para auxiliar desenvolvedores a encontrar e explorar repositórios no GitHub de forma eficiente. O foco principal está na busca avançada e na organização dos resultados.",
+                        descricao: "O BuscaRepositorios é uma ferramenta desenvolvida com a API do github para auxiliar desenvolvedores a encontrar e explorar repositórios no GitHub de forma eficiente.",
                         icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-typescript"],
                         linkSite: "https://joaogabrielrlp.github.io/BuscaRepositorios/",
                         linkRepo: "https://github.com/JoaoGabrielRLP/BuscaRepositorios"
