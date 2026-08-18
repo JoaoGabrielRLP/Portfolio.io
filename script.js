@@ -65,10 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     {
                         id: 7,
-                        imagem: "Imagens/BudgetManager/Img.png",
+                        imagem: "Imagens/BudgetManager/Img.jpeg",
                         titulo: "Budget Manager",
                         descricao: "Uma aplicação web para gerenciar orçamentos e despesas de forma eficiente.",
-                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-bootstrap"],
+                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-typescript"],
                         linkSite: "https://joaogabrielrlp.github.io/Budget-Manager/",
                         linkRepo: "https://github.com/JoaoGabrielRLP/Budget-Manager.git"
                     },
