@@ -214,6 +214,7 @@ body.light .divisor-projeto {
 .fa-js { color: #F7DF1E; }
 .fa-bootstrap { color: #7952B3; }
 .fa-python { color: #3776AB; }
+.fa-typescript { color: #3178C6; }
 /* Se adicionar novas linguagens no futuro, basta criar a classe correspondente aqui com a cor hexadecimal */
 
 .projetos {

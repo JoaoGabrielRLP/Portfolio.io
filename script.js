@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 projetos: [
                     {
                         id: 1,
-                        imagem: "Imagens/transportes318/landingpage.png",
-                        titulo: "318 Transportes",
-                        descricao: "Uma landing page que desenvolvi pensando na empresa de transportes de meu amigo ",
-                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-bootstrap"],
-                        linkSite: "https://joaogabrielrlp.github.io/318.transportes.io/",
-                        linkRepo: "https://github.com/JoaoGabrielRLP/318.transportes.io.git"
-                    },
+                        imagem: "Imagens/BuscaRepo/Img.jpeg",
+                        titulo: "BuscaRepositorios",
+                        descricao: "O BuscaRepositorios é uma ferramenta desenvolvida para auxiliar desenvolvedores a encontrar e explorar repositórios no GitHub de forma eficiente. O foco principal está na busca avançada e na organização dos resultados.",
+                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-typescript"],
+                        linkSite: "https://joaogabrielrlp.github.io/BuscaRepositorios/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/BuscaRepositorios"
+                    }, 
 
                     {
                         id: 2,
@@ -51,7 +51,28 @@ document.addEventListener("DOMContentLoaded", function () {
                         descricao: "O SGD Assistente de Chamados é uma extensão desenvolvida para auxiliar equipes de suporte a gerenciar melhor suas tarefas do dia. O foco principal está no controle de horários de pico, ajudando os técnicos a se organizarem por meio de notificações inteligentes e criação de tarefas personalizadas.",
                         icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-js"],
                         linkRepo: "https://github.com/JoaoGabrielRLP/SGD-Assistente-de-Chamados"
-                    }
+                    },
+
+                    {
+                        id: 6,
+                        imagem: "Imagens/transportes318/landingpage.png",
+                        titulo: "318 Transportes",
+                        descricao: "Uma landing page que desenvolvi pensando na empresa de transportes de meu amigo ",
+                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-bootstrap"],
+                        linkSite: "https://joaogabrielrlp.github.io/318.transportes.io/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/318.transportes.io.git"
+                    },
+
+                    {
+                        id: 7,
+                        imagem: "Imagens/BudgetManager/Img.png",
+                        titulo: "Budget Manager",
+                        descricao: "Uma aplicação web para gerenciar orçamentos e despesas de forma eficiente.",
+                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-bootstrap"],
+                        linkSite: "https://joaogabrielrlp.github.io/Budget-Manager/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/Budget-Manager.git"
+                    },
+                    
 
                 ]
             };
