@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-typescript", "fa-brands fa-node-js", "fa-brands fa-vite"],
                         linkSite: "https://joaogabrielrlp.github.io/ClimaApp-2.0/",
                         linkRepo: "https://github.com/JoaoGabrielRLP/ClimaApp-2.0.git"
-                    },
+                    }
                     
 
                 ]
