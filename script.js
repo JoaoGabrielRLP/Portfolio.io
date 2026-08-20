@@ -72,6 +72,16 @@ document.addEventListener("DOMContentLoaded", function () {
                         linkSite: "https://joaogabrielrlp.github.io/budget-manager/",
                         linkRepo: "https://github.com/JoaoGabrielRLP/Budget-Manager.git"
                     },
+
+                    {
+                        id: 8,
+                        imagem: "Imagens/ClimaApp2.0/Img.jpeg",
+                        titulo: "Clima App 2.0",
+                        descricao: "Uma aplicação web para consultar o clima atual de cidades, desenvolvida com TypeScript e Vite.",
+                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-typescript", "fa-brands fa-node-js", "fa-brands fa-vite"],
+                        linkSite: "https://joaogabrielrlp.github.io/ClimaApp-2.0/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/ClimaApp-2.0.git"
+                    },
                     
 
                 ]
