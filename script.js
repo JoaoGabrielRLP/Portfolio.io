@@ -81,6 +81,15 @@ document.addEventListener("DOMContentLoaded", function () {
                         icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-typescript", "fa-brands fa-node-js", "fa-brands fa-vite"],
                         linkSite: "https://joaogabrielrlp.github.io/ClimaApp-2.0/",
                         linkRepo: "https://github.com/JoaoGabrielRLP/ClimaApp-2.0.git"
+                    },
+                    {
+                        id: 9,
+                        imagem: "Imagens/OrlandoCity/Img.png",
+                        titulo: "Orlando City",
+                        descricao: "Uma e-commerce web para consultar informações sobre o time de futebol Orlando City, desenvolvida com Angular, PHP e MySQL. A aplicação permite aos usuários visualizar estatísticas, notícias e informações sobre os jogadores do time, assim como fazer login e cadastro reais e compras no site",
+                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-js", "fa-brands fa-angular", "fa-brands fa-php"],
+                        linkSite: "https://orlandocity.infinityfree.io/index",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/Orlando-City"
                     }
                     
 
