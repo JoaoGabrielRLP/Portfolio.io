@@ -90,8 +90,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-js", "fa-brands fa-angular", "fa-brands fa-php"],
                         linkSite: "https://orlandocity.infinityfree.io/index",
                         linkRepo: "https://github.com/JoaoGabrielRLP/Orlando-City"
-                    }
+                    },
                     
+                    {
+                        id: 10,
+                        imagem: "Imagens/SistemaXadrez/Img.png",
+                        titulo: "Streamers de xadrez",
+                        descricao: "Uma aplicação web desenvolvida com React e TypeScript para consultar e apresentar informações sobre streamers de xadrez, utilizando uma API para obter os dados de forma dinâmica.",
+                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-typescript", "fa-brands fa-react"],
+                        linkSite: "https://joaogabrielrlp.github.io/StreamersChess.com/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/StreamersChess.com"
+                    }
 
                 ]
             };
