@@ -1,4 +1,48 @@
-/* Reset básico */
+/* ==========================================================================
+   Portfólio João Gabriel — style.css
+   Paleta, tipografia e componentes revisados para um visual mais profissional
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap');
+
+/* ---------- Design tokens ---------- */
+:root {
+    --bg: #14141a;
+    --bg-elevated: #1c1c24;
+    --bg-elevated-2: #24242e;
+    --text: #f2f2f5;
+    --text-muted: #a3a3af;
+    --border: rgba(255, 255, 255, 0.08);
+
+    --primary: #9b2fd6;
+    --primary-2: #ff5fa2;
+    --accent-gradient: linear-gradient(120deg, var(--primary), var(--primary-2));
+
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+
+    --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.28);
+    --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.38);
+    --shadow-glow: 0 0 0 1px rgba(155, 47, 214, 0.25), 0 12px 30px rgba(155, 47, 214, 0.18);
+
+    --ease: cubic-bezier(.4, 0, .2, 1);
+}
+
+body.light {
+    --bg: #f5f5f9;
+    --bg-elevated: #ffffff;
+    --bg-elevated-2: #eeeef4;
+    --text: #17171c;
+    --text-muted: #5b5b66;
+    --border: rgba(0, 0, 0, 0.08);
+
+    --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.07);
+    --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.10);
+    --shadow-glow: 0 0 0 1px rgba(155, 47, 214, 0.15), 0 12px 30px rgba(155, 47, 214, 0.10);
+}
+
+/* ---------- Reset ---------- */
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +50,50 @@
     font-family: 'DM Sans', sans-serif;
 }
 
-body {
-    background-color: #181818;
-    color: #fff;
-    text-align: center;
-    font-size: 1.3em;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Navbar */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    text-align: center;
+    font-size: 1.15em;
+    line-height: 1.6;
+    transition: background-color .35s var(--ease), color .35s var(--ease);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Sora', 'DM Sans', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+h2 {
+    font-size: 1.9em;
+    margin-bottom: 8px;
+}
+
+/* Linha de destaque discreta sob o título de cada card */
+.card > h2::after,
+.titulo-projeto h2::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin: 12px 0 0 0;
+    border-radius: 3px;
+    background: var(--accent-gradient);
+}
+
+.card > h2 {
+    display: inline-block;
+}
+
+/* ---------- Navbar ---------- */
 nav {
-    background-color: #1f1f1f;
-    padding: 20px;
+    background-color: var(--bg-elevated);
+    padding: 16px 24px;
     width: 90%;
     max-width: 1050px;
     margin: 20px auto 0 auto;
@@ -25,9 +102,16 @@ nav {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 16px;
+    z-index: 50;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background-color: color-mix(in srgb, var(--bg-elevated) 85%, transparent);
+    transition: background-color .35s var(--ease);
 }
 
 .logo-tema {
@@ -37,7 +121,7 @@ nav {
 }
 
 nav img {
-    max-height: 60px;
+    max-height: 48px;
     height: auto;
     width: auto;
     max-width: 150px;
@@ -51,33 +135,53 @@ nav .menu-icon {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    gap: 4px;
 }
 
 nav .menu-icon .bar {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
+    height: 2px;
+    width: 24px;
+    background-color: var(--text);
+    border-radius: 2px;
+    transition: background-color .3s var(--ease);
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 28px;
     margin-left: auto;
     padding: 10px;
 }
 
 nav ul li a {
-    color: white;
+    position: relative;
+    color: var(--text);
     text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 4px;
+    transition: color 0.3s var(--ease);
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--accent-gradient);
+    transition: width .3s var(--ease);
 }
 
 nav ul li a:hover {
-    color: #800080;
+    color: var(--primary-2);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -89,54 +193,78 @@ nav ul li a:hover {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 68px;
         left: 0;
-        background-color: #1f1f1f;
+        background-color: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
         width: 100%;
         z-index: 1;
+        gap: 6px;
     }
 
     nav .menu-toggle:checked ~ ul {
         display: flex;
-    }
-
-    body.light nav ul {
-        background-color: white;
     }
 }
 
 .botao-tema {
     background: none;
     border: none;
-    font-size: 22px;
-    color: white;
+    font-size: 20px;
+    color: var(--text);
     cursor: pointer;
     margin-left: 15px;
+    transition: transform .3s var(--ease);
 }
 
+.botao-tema:hover {
+    transform: rotate(-15deg) scale(1.1);
+}
+
+/* ---------- Cards genéricos ---------- */
 .card {
-    background-color: #1f1f1f;
-    padding: 40px;
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border);
+    padding: 48px 40px;
     margin: 60px auto;
     width: 90%;
     max-width: 1050px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
     text-align: left;
+    opacity: 0;
+    transform: translateY(18px);
+    animation: reveal .7s var(--ease) forwards;
 }
 
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Hero ---------- */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
 }
 
 .hero .foto {
     width: 20vw;
-    max-width: 200px;
+    max-width: 190px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 50%;
     margin-right: 20px;
     order: 2;
+    border: 3px solid transparent;
+    background: linear-gradient(var(--bg-elevated), var(--bg-elevated)) padding-box,
+                var(--accent-gradient) border-box;
+    box-shadow: var(--shadow-glow);
 }
 
 .hero .info {
@@ -144,9 +272,11 @@ nav ul li a:hover {
 }
 
 .hero .titulo-home {
-    background: linear-gradient(to right, #800080, #ff69b4);
+    font-size: 2.4em;
+    background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 @media (max-width: 768px) {
@@ -167,48 +297,53 @@ nav ul li a:hover {
     }
 }
 
+/* ---------- Sobre ---------- */
 .sobre .contatos {
     margin-top: 10px;
 }
 
 .sobre .contatos a {
     margin-right: 25px;
-    color: inherit;
-    font-size: 30px;
+    color: var(--text-muted);
+    font-size: 28px;
+    display: inline-block;
+    transition: color .3s var(--ease), transform .3s var(--ease);
+}
+
+.sobre .contatos a:hover {
+    color: var(--primary-2);
+    transform: translateY(-3px);
 }
 
 .sobre p {
     text-align: justify;
+    color: var(--text-muted);
 }
 
-/* --- ESTILO DA LINHA DIVISÓRIA --- */
+/* ---------- Divisor ---------- */
 .divisor-projeto {
     border: 0;
     height: 1px;
-    background-color: #444; /* Cinza para o tema escuro */
+    background-color: var(--border);
     margin: 10px 0;
 }
 
-body.light .divisor-projeto {
-    background-color: #ddd; /* Cinza leve para o tema claro */
-}
-
-/* --- AJUSTE DOS ÍCONES --- */
+/* ---------- Ícones dos projetos ---------- */
 .icones {
     display: flex;
-    gap: 12px; /* Espaço uniforme entre os ícones */
+    gap: 12px;
     margin: 0 0 15px 0;
-    justify-content: flex-start; /* Alinha à esquerda */
+    justify-content: flex-start;
     padding: 0;
 }
 
 .icones i {
-    font-size: 24px; /* Tamanho profissional e discreto */
-    margin: 0; /* Remove as margens gigantes de antes */
+    font-size: 22px;
+    margin: 0;
     width: auto;
 }
 
-/* --- CORES DAS TECNOLOGIAS (FontAwesome) --- */
+/* Cores das tecnologias (FontAwesome) */
 .fa-html5 { color: #E34F26; }
 .fa-css3-alt { color: #1572B6; }
 .fa-js { color: #F7DF1E; }
@@ -218,9 +353,11 @@ body.light .divisor-projeto {
 .fa-node-js { color: #339933; }
 .fa-angular { color: #DD0031; }
 .fa-php { color: #777BB4; }
-.fa-react {color: #61DBFB}
-/* Se adicionar novas linguagens no futuro, basta criar a classe correspondente aqui com a cor hexadecimal */
+.fa-react { color: #61DBFB; }
+.fa-vite { color: #A78BFA; }
+/* Se adicionar novas linguagens no futuro, crie a classe correspondente aqui */
 
+/* ---------- Projetos ---------- */
 .projetos {
     display: flex;
     flex-direction: column;
@@ -238,177 +375,206 @@ body.light .divisor-projeto {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 24px;
 }
 
 .projetos .projeto {
-    background: #252525;
+    background: var(--bg-elevated-2);
+    border: 1px solid var(--border);
     padding: 20px;
-    margin: 20px auto;
+    margin: 0;
     width: 90%;
-    max-width: 400px;
-    border-radius: 10px;
+    max-width: 380px;
+    border-radius: var(--radius-md);
     text-align: left;
     display: flex;
-    flex-direction: column; /* Organiza os elementos em coluna */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column;
+    transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color .35s var(--ease);
 }
 
-/* Efeito de elevação profissional ao passar o mouse */
 .projetos .projeto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-glow);
+    border-color: rgba(155, 47, 214, 0.35);
 }
 
 .projeto img {
     width: 100%;
-    aspect-ratio: 16 / 9; /* Mantém um padrão visual de monitor/tela */
-    object-fit: cover; /* Preenche o espaço cortando o excesso, sem amassar a imagem */
-    border-radius: 10px;
-    border: 1px solid #444; /* Borda sutil para dar acabamento */
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+}
+
+.projeto h3 {
+    margin-top: 14px;
+    font-size: 1.15em;
 }
 
 .botoes-container {
     display: flex;
-    gap: 15px; /* Espaço entre os botões */
-    margin-top: auto; /* Esta é a peça-chave: empurra a div inteira para o fundo do card */
+    gap: 12px;
+    margin-top: auto;
     padding-top: 15px;
 }
 
 .botoes-container a.botao {
-    flex: 1; /* Faz com que ambos os botões ocupem 50% do espaço cada */
+    flex: 1;
     text-align: center;
-    margin: 0; /* Reseta margens antigas do botão */
+    margin: 0;
 }
 
 .projeto p {
     max-height: 4.5em;
     overflow-y: auto;
     padding-right: 5px;
-    text-align: left; /* Modificado de justify para left */
+    text-align: left;
+    color: var(--text-muted);
+    font-size: 0.92em;
 }
+
 .projeto p::-webkit-scrollbar {
     width: 5px;
 }
 
 .projeto p::-webkit-scrollbar-thumb {
-    background-color: #800080;
+    background: var(--accent-gradient);
     border-radius: 5px;
 }
 
-.projeto a {
+/* Botão padrão usado dentro dos cards de projeto */
+.projeto a.botao {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
     padding: 10px;
-    background-color: #FFD700;
-    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
 }
 
-.skills {
-    background-color: #1f1f1f;
-    padding: 40px 20px; /* Padding lateral reduzido para 20px */
-    margin: auto;
-    width: 100%;
-    max-width: 1050px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; /* Gerencia o espaço entre os cards */
-}
+/* ---------- Botão (CTA) genérico ---------- */
 .botao {
     display: inline-block;
-    background: linear-gradient(to right, #800080, #ff69b4);
-    color: white;
-    padding: 10px;
+    background: var(--accent-gradient);
+    background-size: 160% 160%;
+    color: #fff;
+    padding: 12px 18px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    transition: background-position .5s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
+    box-shadow: var(--shadow-sm);
 }
 
 .botao:hover {
-    background: linear-gradient(to right, #6a0080, #ff1493);
+    background-position: 100% 0;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
 }
 
+/* ==========================================================================
+   Tecnologias — grade estática de fallback (mantida para telas muito largas
+   sem JS ou como base visual dos cards)
+   ========================================================================== */
 .tech-card {
-    background-color: #2a2a2a;
-    border-radius: 10px;
+    background-color: var(--bg-elevated-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
     width: 100px;
     height: 120px;
     padding: 10px;
     text-align: center;
-    transition: transform 0.2s ease, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-shrink: 0;
+    transition: transform 0.3s var(--ease), background-color 0.3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
 }
 
 .tech-card img {
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
 }
 
 .tech-card span {
     display: block;
-    margin-top: 8px;
-    font-size: 14px;
-    color: inherit;
+    font-size: 13px;
+    color: var(--text-muted);
 }
 
 .tech-card:hover {
-    transform: scale(1.1);
-    background-color: #444;
+    transform: translateY(-4px) scale(1.05);
+    background-color: var(--bg-elevated);
+    border-color: rgba(155, 47, 214, 0.4);
+    box-shadow: var(--shadow-glow);
 }
 
-.grupo-tecnologias h3 {
-    text-align: left;
-    margin-top: 30px;
-    color: #ff69b4;
+/* ==========================================================================
+   Carrossel automático de tecnologias
+   Estrutura esperada no HTML:
+   <div class="skills-carousel">
+     <div class="skills-track">
+       ...tech-card... (conjunto 1)
+       ...tech-card... (conjunto 2 — cópia idêntica do conjunto 1)
+     </div>
+   </div>
+   A duplicação dos itens é o que permite o loop parecer contínuo.
+   ========================================================================== */
+.skills-carousel {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 60px, #000 calc(100% - 60px), transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 60px, #000 calc(100% - 60px), transparent 100%);
 }
 
-body.light {
-    background-color: #f2f2f2;
-    color: #181818;
+.skills-track {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 18px;
+    width: max-content;
+    padding: 10px 0 20px 0;
+    will-change: transform;
+    animation: scroll-left 42s linear infinite !important;
 }
 
-body.light nav,
-body.light nav ul li a,
-body.light .card,
-body.light .grupo-tecnologias,
-body.light .skills,
-body.light footer {
-    background-color: #fff;
-    color: #000;
+.skills-carousel.reverse .skills-track {
+    animation-name: scroll-right;
 }
 
-body.light .tech-card {
-    background-color: #e2e2e2;
+/* Pausa no hover para acessibilidade/legibilidade */
+.skills-carousel:hover .skills-track {
+    animation-play-state: paused;
 }
 
-body.light .tech-card:hover {
-    background-color: #ccc;
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
 }
 
-body.light .botao-tema {
-    color: #181818;
+@keyframes scroll-right {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
 }
 
-body.light .projeto {
-    background-color: #f2f2f2;
+@media (prefers-reduced-motion: reduce) {
+    .card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }
 
-body.light nav ul li a:hover {
-    color: #ff69b4;
-}
-
-body.light nav .menu-icon .bar {
-    background-color: black;
-}
-
+/* ---------- Footer ---------- */
 footer {
-    background-color: #1f1f1f;
-    color: white;
-    padding: 20px;
+    background-color: var(--bg-elevated);
+    border-top: 1px solid var(--border);
+    color: var(--text);
+    padding: 32px 20px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -424,55 +590,58 @@ footer .contatos {
     flex-direction: column;
     gap: 10px;
     text-align: center;
+    margin-top: 10px;
 }
 
 footer .contato-item {
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, #800080, #ff69b4);
-    padding: 10px;
-    border-radius: 5px;
+    background: var(--accent-gradient);
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    transition: transform .3s var(--ease);
+}
+
+footer .contato-item:hover {
+    transform: translateY(-2px);
 }
 
 footer .contato-item a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
     color: #fff;
+    font-weight: 600;
 }
 
-/* --- ASSINATURA DO FOOTER --- */
 .assinatura {
     margin-top: 30px;
-    font-size: 0.9em;
-    color: #888;
+    font-size: 0.85em;
+    color: var(--text-muted);
     width: 100%;
     text-align: center;
-    border-top: 1px solid #444;
+    border-top: 1px solid var(--border);
     padding-top: 15px;
 }
 
-body.light .assinatura {
-    color: #555;
-    border-top: 1px solid #ddd;
+/* ---------- Ajustes finos de tema claro ---------- */
+body.light nav .menu-icon .bar {
+    background-color: var(--text);
 }
 
+/* ---------- Responsivo ---------- */
 @media (max-width: 480px) {
-    .skills {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center; /* Centraliza o card dentro da sua própria coluna */
-        padding: 20px 10px;
-    }
-    
-    .tech-card {
-        width: 100%;
-        max-width: 110px; /* Evita que o card fique esticado demais em telas um pouco maiores */
+    .card {
+        padding: 32px 22px;
     }
 
     .botoes-container {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .botoes-container a.botao {
         width: 100%;
     }
