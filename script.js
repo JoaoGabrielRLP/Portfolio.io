@@ -104,10 +104,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     {
                         id: 11,
-                        imagem: "Imagens/NFTMarketplace/Img.svg",
+                        imagem: "Imagens/NFTMarketplace/Img.png",
                         titulo: "NFT Marketplace",
                         descricao: "Marketplace de NFTs simulado, desenvolvido com React e TypeScript. Permite explorar obras, pesquisar e filtrar o catálogo, favoritar itens, gerenciar o carrinho e concluir pedidos em um fluxo de demonstração sem blockchain ou pagamentos reais.",
                         icones: ["fa-brands fa-typescript", "fa-brands fa-react", "fa-vite"],
+                        linkSite: "https://nft-marketplace-alpha-henna.vercel.app/",
                         linkRepo: "https://github.com/JoaoGabrielRLP/NFT-MARKETPLACE"
                     }
 
