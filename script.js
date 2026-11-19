@@ -6,79 +6,29 @@ document.addEventListener("DOMContentLoaded", function () {
             return {
                 projetos: [
                     {
-                        id: 1,
-                        imagem: "Imagens/BuscaRepo/Img.jpeg",
-                        titulo: "BuscaRepositorios",
-                        descricao: "O BuscaRepositorios é uma ferramenta desenvolvida com a API do github para auxiliar desenvolvedores a encontrar e explorar repositórios no GitHub de forma eficiente.",
-                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-typescript"],
-                        linkSite: "https://joaogabrielrlp.github.io/BuscaRepositorios/",
-                        linkRepo: "https://github.com/JoaoGabrielRLP/BuscaRepositorios"
-                    }, 
-
-                    {
-                        id: 2,
-                        imagem: "Imagens/Cooper/GifCooper.gif",
-                        titulo: "Coopernorte Telecom",
-                        descricao: "Site de vendas para uma empresa de provedor de internet que trabalhei",
-                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-js"],
-                        linkSite: "http://www.coopernortetelecom.com.br/",
-                        linkRepo: "https://github.com/JoaoGabrielRLP/Coopernorte-telecom"
+                        id: 11,
+                        imagem: "Imagens/NFTMarketplace/Img.png",
+                        titulo: "NFT Marketplace",
+                        descricao: "Marketplace demonstrativo em React e TypeScript, com catálogo, busca, filtros, favoritos, carrinho e pedidos simulados. Não utiliza blockchain nem processa pagamentos reais.",
+                        tecnologias: ["TypeScript", "React", "Vite"],
+                        linkSite: "https://nft-marketplace-alpha-henna.vercel.app/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/NFT-MARKETPLACE"
                     },
-
                     {
-                        id: 3,
-                        imagem: "Imagens/SybaseLogManager/SybaseGif.gif",
-                        titulo: "Sybase Log Manager",
-                        descricao: "O Sybase Log Manager é uma ferramenta auxiliar para a aplicação, desvincúlo e gerenciamento de banco de dados e logs do Sybase 17, projetada para ser utilizada com o sistema Domínio ou o SQL Anywhere versão 17.",
-                        icones: ["fa-brands fa-python"],
-                        linkRepo: "https://github.com/JoaoGabrielRLP/SybaseLogManager"
+                        id: 10,
+                        imagem: "Imagens/SistemaXadrez/Img.png",
+                        titulo: "Streamers de xadrez",
+                        descricao: "Aplicação web em React e TypeScript que consulta uma API para apresentar informações sobre streamers de xadrez.",
+                        tecnologias: ["HTML", "CSS", "TypeScript", "React"],
+                        linkSite: "https://joaogabrielrlp.github.io/StreamersChess.com/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/StreamersChess.com"
                     },
-
-                    {
-                        id: 4,
-                        imagem: "Imagens/WeatherApp/WeatherApp.png",
-                        titulo: "Clima App",
-                        descricao: "Este é um aplicativo web simples de previsão do tempo que permite aos usuários pesquisar pelo clima de qualquer cidade em tempo real. Ele usa a API do OpenWeatherMap para obter informações como temperatura, descrição do clima, umidade e velocidade do vento.",
-                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-js"],
-                        linkSite: "https://joaogabrielrlp.github.io/ClimaApp.io/",
-                        linkRepo: "https://github.com/JoaoGabrielRLP/SybaseLogManager"
-                    },
-
-                    {
-                        id: 5,
-                        imagem: "Imagens/SGD-Notifier/Extensao.gif",
-                        titulo: "SGD-Assistente-de-Chamados",
-                        descricao: "O SGD Assistente de Chamados é uma extensão desenvolvida para auxiliar equipes de suporte a gerenciar melhor suas tarefas do dia. O foco principal está no controle de horários de pico, ajudando os técnicos a se organizarem por meio de notificações inteligentes e criação de tarefas personalizadas.",
-                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-js"],
-                        linkRepo: "https://github.com/JoaoGabrielRLP/SGD-Assistente-de-Chamados"
-                    },
-
-                    {
-                        id: 6,
-                        imagem: "Imagens/transportes318/landingpage.png",
-                        titulo: "318 Transportes",
-                        descricao: "Uma landing page que desenvolvi pensando na empresa de transportes de meu amigo ",
-                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-bootstrap"],
-                        linkSite: "https://joaogabrielrlp.github.io/318.transportes.io/",
-                        linkRepo: "https://github.com/JoaoGabrielRLP/318.transportes.io.git"
-                    },
-
-                    {
-                        id: 7,
-                        imagem: "Imagens/BudgetManager/Img.jpeg",
-                        titulo: "Budget Manager",
-                        descricao: "Uma aplicação web para gerenciar orçamentos e despesas de forma eficiente.",
-                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-typescript"],
-                        linkSite: "https://joaogabrielrlp.github.io/budget-manager/",
-                        linkRepo: "https://github.com/JoaoGabrielRLP/Budget-Manager.git"
-                    },
-
                     {
                         id: 8,
                         imagem: "Imagens/ClimaApp2.0/Img.jpeg",
                         titulo: "Clima App 2.0",
-                        descricao: "Uma aplicação web para consultar o clima atual de cidades, desenvolvida com TypeScript e Vite. Versão atualizada do Clima App, com melhorias na interface e funcionalidades adicionais.",
-                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-typescript", "fa-brands fa-node-js", "fa-brands fa-vite"],
+                        descricao: "Versão atualizada do Clima App, desenvolvida com TypeScript e Vite para consultar as condições do tempo por cidade.",
+                        tecnologias: ["HTML", "CSS", "TypeScript", "Vite"],
                         linkSite: "https://joaogabrielrlp.github.io/ClimaApp-2.0/",
                         linkRepo: "https://github.com/JoaoGabrielRLP/ClimaApp-2.0.git"
                     },
@@ -86,34 +36,130 @@ document.addEventListener("DOMContentLoaded", function () {
                         id: 9,
                         imagem: "Imagens/OrlandoCity/Img.png",
                         titulo: "Orlando City",
-                        descricao: "Uma e-commerce web para consultar informações sobre o time de futebol Orlando City, desenvolvida com Angular, PHP e MySQL. A aplicação permite aos usuários visualizar estatísticas, notícias e informações sobre os jogadores do time, assim como fazer login e cadastro reais e compras no site",
-                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-js", "fa-brands fa-angular", "fa-brands fa-php"],
+                        descricao: "Site de e-commerce sobre o Orlando City, com informações do time e fluxos de conta e compra, desenvolvido com Angular, PHP e MySQL.",
+                        tecnologias: ["HTML", "CSS", "JavaScript", "Angular", "PHP", "MySQL"],
                         linkSite: "https://orlandocity.infinityfree.io/index",
                         linkRepo: "https://github.com/JoaoGabrielRLP/Orlando-City"
                     },
-                    
                     {
-                        id: 10,
-                        imagem: "Imagens/SistemaXadrez/Img.png",
-                        titulo: "Streamers de xadrez",
-                        descricao: "Uma aplicação web desenvolvida com React e TypeScript para consultar e apresentar informações sobre streamers de xadrez, utilizando uma API para obter os dados de forma dinâmica.",
-                        icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-typescript", "fa-brands fa-react"],
-                        linkSite: "https://joaogabrielrlp.github.io/StreamersChess.com/",
-                        linkRepo: "https://github.com/JoaoGabrielRLP/StreamersChess.com"
+                        id: 7,
+                        imagem: "Imagens/BudgetManager/Img.jpeg",
+                        titulo: "Budget Manager",
+                        descricao: "Aplicação web para organizar orçamentos e acompanhar despesas.",
+                        tecnologias: ["HTML", "CSS", "TypeScript"],
+                        linkSite: "https://joaogabrielrlp.github.io/budget-manager/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/Budget-Manager.git"
                     },
-
                     {
-                        id: 11,
-                        imagem: "Imagens/NFTMarketplace/Img.png",
-                        titulo: "NFT Marketplace",
-                        descricao: "Marketplace de NFTs simulado, desenvolvido com React e TypeScript. Permite explorar obras, pesquisar e filtrar o catálogo, favoritar itens, gerenciar o carrinho e concluir pedidos em um fluxo de demonstração sem blockchain ou pagamentos reais.",
-                        icones: ["fa-brands fa-typescript", "fa-brands fa-react", "fa-vite"],
-                        linkSite: "https://nft-marketplace-alpha-henna.vercel.app/",
-                        linkRepo: "https://github.com/JoaoGabrielRLP/NFT-MARKETPLACE"
+                        id: 1,
+                        imagem: "Imagens/BuscaRepo/Img.jpeg",
+                        titulo: "Busca de Repositórios",
+                        descricao: "Aplicação que consulta a API do GitHub para buscar e explorar repositórios.",
+                        tecnologias: ["HTML", "CSS", "TypeScript"],
+                        linkSite: "https://joaogabrielrlp.github.io/BuscaRepositorios/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/BuscaRepositorios"
+                    },
+                    {
+                        id: 5,
+                        imagem: "Imagens/SGD-Notifier/Extensao.gif",
+                        titulo: "SGD Assistente de Chamados",
+                        descricao: "Extensão para ajudar equipes de suporte a organizar tarefas e horários de pico com notificações e tarefas personalizadas.",
+                        tecnologias: ["HTML", "CSS", "JavaScript"],
+                        linkRepo: "https://github.com/JoaoGabrielRLP/SGD-Assistente-de-Chamados"
+                    },
+                    {
+                        id: 4,
+                        imagem: "Imagens/WeatherApp/WeatherApp.png",
+                        titulo: "Clima App",
+                        descricao: "Aplicação web que consulta a API OpenWeatherMap para exibir as condições atuais, temperatura, umidade e vento por cidade.",
+                        tecnologias: ["HTML", "CSS", "JavaScript"],
+                        linkSite: "https://joaogabrielrlp.github.io/ClimaApp.io/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/ClimaApp.io"
+                    },
+                    {
+                        id: 2,
+                        imagem: "Imagens/Cooper/GifCooper.gif",
+                        titulo: "Coopernorte Telecom",
+                        descricao: "Site comercial para um provedor de internet, com informações sobre seus serviços e planos.",
+                        tecnologias: ["HTML", "CSS", "JavaScript"],
+                        linkSite: "http://www.coopernortetelecom.com.br/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/Coopernorte-telecom"
+                    },
+                    {
+                        id: 6,
+                        imagem: "Imagens/transportes318/landingpage.png",
+                        titulo: "318 Transportes",
+                        descricao: "Landing page criada para apresentar os serviços e as informações de uma empresa de transportes.",
+                        tecnologias: ["HTML", "CSS", "Bootstrap"],
+                        linkSite: "https://joaogabrielrlp.github.io/318.transportes.io/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/318.transportes.io.git"
                     }
-
-                ]
+                ],
+                extras: [
+                    {
+                        id: "sybase-log-manager",
+                        imagem: "Imagens/SybaseLogManager/SybaseGif.gif",
+                        titulo: "Sybase Log Manager",
+                        descricao: "Ferramenta em Python para apoiar o vínculo e desvínculo de bancos de dados e o gerenciamento de logs do Sybase 17, com foco nos sistemas Domínio e SQL Anywhere 17.",
+                        tecnologias: ["Python"],
+                        linkRepo: "https://github.com/JoaoGabrielRLP/SybaseLogManager"
+                    },
+                    {
+                        id: "crosscode-item-tracker",
+                        titulo: "CrossCode Item Tracker",
+                        descricao: "Mod em JavaScript para CCLoader 2 que acompanha materiais de receitas, atualiza o progresso no HUD e permite organizar várias listas. Também ajuda a localizar itens e salva os dados separadamente do save do jogo.",
+                        tecnologias: ["JavaScript", "CCLoader 2", "CrossCode"],
+                        linkRepo: "https://github.com/JoaoGabrielRLP/Crosscode-item-tracker",
+                        imagemAtual: 0,
+                        mouseOver: false,
+                        focused: false,
+                        imagens: [
+                            {
+                                src: "Imagens/CrossCodeItemTracker/ItemTracker-HUD.png",
+                                alt: "HUD do CrossCode Item Tracker mostrando os materiais necessários para criar o Manto Rubro durante o jogo."
+                            },
+                            {
+                                src: "Imagens/CrossCodeItemTracker/ItemTracker-Lists.png",
+                                alt: "A aba Lists no menu de missões do CrossCode exibindo a lista de materiais do Manto Rubro."
+                            }
+                        ]
+                    }
+                ],
+                carouselTimer: null
             };
+        },
+        mounted() {
+            if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                return;
+            }
+
+            this.carouselTimer = window.setInterval(() => {
+                if (document.hidden) {
+                    return;
+                }
+
+                this.extras.forEach((projeto) => {
+                    if (projeto.imagens && !projeto.mouseOver && !projeto.focused && projeto.imagens.length > 1) {
+                        projeto.imagemAtual = (projeto.imagemAtual + 1) % projeto.imagens.length;
+                    }
+                });
+            }, 6500);
+        },
+        beforeUnmount() {
+            if (this.carouselTimer !== null) {
+                window.clearInterval(this.carouselTimer);
+            }
+        },
+        methods: {
+            mudarImagem(projeto, direcao) {
+                projeto.imagemAtual = (projeto.imagemAtual + direcao + projeto.imagens.length) % projeto.imagens.length;
+            },
+            selecionarImagem(projeto, indice) {
+                projeto.imagemAtual = indice;
+            },
+            retomarCarrossel(event, projeto) {
+                projeto.focused = Boolean(event.relatedTarget && event.currentTarget.contains(event.relatedTarget));
+            }
         }
     }).mount("#app");
 });

@@ -1,170 +1,225 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio João Gabriel</title>
+    <meta name="description" content="Portfólio de João Gabriel, desenvolvedor Full Stack. Conheça projetos web, aplicações e ferramentas desenvolvidas com tecnologias modernas.">
+    <meta name="theme-color" content="#0e1118">
+    <title>João Gabriel | Desenvolvedor Full Stack</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
     <script src="lightmode.js"></script>
-
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
     <header>
         <nav>
-            
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            
-                <label for="menu-toggle" class="menu-icon">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </label>
-                <img src="Imagens/logo.png" alt="" width="300px">  
-                                     
-            <ul>                
+            <a class="logo" href="#home" aria-label="João Gabriel, início">
+                <img src="Imagens/logo.png" alt="João Gabriel" width="300" height="74">
+            </a>
+
+            <button id="menu-toggle" class="menu-icon" type="button" aria-label="Abrir menu" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul id="primary-navigation">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#skills">Tecnologias</a></li>
                 <li><a href="#app">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            
-            
-            <button id="toggle-theme" class="botao-tema">🌙</button>
+
+            <button id="toggle-theme" class="botao-tema" type="button" aria-label="Ativar tema claro" title="Ativar tema claro">🌙</button>
         </nav>
     </header>
-    
-    <section id="home" class="hero card">
-        <img src="Imagens/perfil.jpg" alt="Minha Foto" class="foto">
-        <div class="info">
-            <h2 class="titulo-home">Desenvolvedor Full Stack</h2>
-            
-        </div>
-    </section>
-    
-    <section id="sobre" class="sobre card">
-        <h2>Sobre Mim</h2>
-        <br>
-        
-        <p>Tenho experiência em desenvolvimento web e back-end, com projetos disponíveis no meu GitHub. No desenvolvimento web, utilizo <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>, além de frameworks como <strong>Bootstrap</strong>, <strong>Vue.js</strong> e <strong>Angular</strong> para criar interfaces modernas e responsivas. No back-end, trabalho com <strong>PHP</strong>, <strong>Java</strong>, <strong>C</strong>, <strong>Python</strong>, <strong>Node.js</strong>, <strong>Vite</strong>  e bancos de dados <strong>SQL</strong>, garantindo a estrutura e a lógica por trás das aplicações.</p>
 
-        <br>
-        
-        <p>Participei de projetos nos quais identifiquei problemas e desenvolvi ou documentei soluções, visando otimizar e facilitar procedimentos técnicos ou desenvolver landing pages para empresas.</p>
+    <main id="main-content">
+        <section id="home" class="hero card" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <p class="hero-kicker">Portfólio · João Gabriel</p>
+                <h1 id="hero-title" class="titulo-home">Desenvolvedor <span>Full Stack</span></h1>
+                <p class="hero-resumo">Desenvolvo aplicações web, interfaces responsivas e ferramentas que resolvem problemas do dia a dia.</p>
+                <div class="hero-actions">
+                    <a href="#app" class="botao">Conheça meus projetos</a>
+                    <a href="#contato" class="botao botao-secundario">Entre em contato</a>
+                    <a href="Currículo - João Gabriel Rodrigues Lopes Pereira - Desenvolvedor.pdf" download class="link-curriculo">Baixar currículo <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <img src="Imagens/perfil.jpg" alt="Foto de João Gabriel" class="foto" width="190" height="190">
+        </section>
 
-        <br>
-
-        <p>Minhas redes:</p>
-            <div class="contatos">
-                
-                <a href="https://www.linkedin.com/in/joaogabrielrlp/" style="display: inline-block;" target="_blank">
-                    <i class="fa-brands fa-linkedin" alt="Linkedin"></i>
+        <section id="sobre" class="sobre card" aria-labelledby="about-title">
+            <div class="section-heading">
+                <p class="section-kicker">Perfil profissional</p>
+                <h2 id="about-title">Sobre mim</h2>
+            </div>
+            <p>Sou desenvolvedor com experiência em projetos web e back-end. No meu trabalho, já criei interfaces responsivas, aplicações que consomem APIs, sites para empresas e ferramentas de apoio a rotinas técnicas.</p>
+            <p>Tenho contato com tecnologias como JavaScript, TypeScript, React, Vue, Angular, Node.js, PHP e bancos de dados relacionais. Gosto de transformar necessidades em soluções claras, úteis e fáceis de usar.</p>
+            <div class="social-links" aria-label="Redes e perfil">
+                <a href="https://www.linkedin.com/in/joaogabrielrlp/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de João Gabriel">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/JoaoGabrielRLP" style="display: inline-block;" target="_blank">
-                    <i class="fab fa-github" alt="Github"></i>
-                </a>
-                <a href="https://joaogabrielrlp.github.io/cartao_visitas/" target="_blank">
-                    <i class="fa-solid fa-address-card" alt="Cartão de visitas"></i>
+                <a href="https://github.com/JoaoGabrielRLP" target="_blank" rel="noopener noreferrer" aria-label="GitHub de João Gabriel">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
                 </a>
             </div>
-       <br>
-      <a href="Currículo - João Gabriel Rodrigues Lopes Pereira - Desenvolvedor.pdf" download class="botao">Baixar currículo</a>
-     
-        
-    </section>
-    
-    <section id="skills" class="tecnologias card">
-        <h2>Tecnologias</h2>
+        </section>
 
-        <div class="skills-carousel">
-          <div class="skills-track">
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"><span>HTML</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><span>CSS</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><span>Bootstrap</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"><span>TypeScript</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" alt="Vite"><span>Vite</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"><span>Vue.js</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" alt="Angular"><span>Angular</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="react"><span>React</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" alt="PHP"><span>PHP</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt="Java"><span>Java</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"><span>C</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL"><span>MySQL</span></div>
-            <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="postgresql"><span>PostgreSQL</span></div>
-            <!-- Conjunto duplicado: necessário para o loop do carrossel ficar contínuo -->
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""><span>HTML</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""><span>CSS</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt=""><span>Bootstrap</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=""><span>JavaScript</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt=""><span>TypeScript</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" alt=""><span>Vite</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt=""><span>Vue.js</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" alt=""><span>Angular</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt=""><span>React</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" alt=""><span>PHP</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt=""><span>Java</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt=""><span>C</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt=""><span>Python</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt=""><span>Node.js</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt=""><span>MySQL</span></div>
-            <div class="tech-card" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt=""><span>PostgreSQL</span></div>
-          </div>
-        </div>
-      </section>
-      
-    
-    <section id="app" class="projetos card">
-        <div class="titulo-projeto">
-            <h2>Meus Projetos</h2>
-        </div>
-        
-    <div class="lista-projetos">
-        <div v-for="projeto in projetos" :key="projeto.id" class="projeto">
-            <img :src="projeto.imagem" :alt="projeto.titulo">
-            <br>
-            <h3>{{ projeto.titulo }}</h3>
-            
-            <hr class="divisor-projeto">
-            
-            <div class="icones">
-                <i v-for="icone in projeto.icones" :key="icone" :class="icone"></i>
+        <section id="skills" class="tecnologias card" aria-labelledby="skills-title">
+            <div class="section-heading">
+                <p class="section-kicker">Ferramentas e linguagens</p>
+                <h2 id="skills-title">Tecnologias</h2>
             </div>
-            
-            <p>{{ projeto.descricao }}</p>
-            
-            <div class="botoes-container">
-                <a v-if="projeto.linkSite" :href="projeto.linkSite" target="_blank" class="botao">Ver Site</a>
-                <a :href="projeto.linkRepo" target="_blank" class="botao">Repositório</a>
+            <div class="skills-groups">
+                <div class="skills-group">
+                    <h3>Front-end</h3>
+                    <ul class="tech-list">
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" loading="lazy"><span>HTML</span></li>
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" loading="lazy"><span>CSS</span></li>
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" loading="lazy"><span>Bootstrap</span></li>
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" loading="lazy"><span>JavaScript</span></li>
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" loading="lazy"><span>TypeScript</span></li>
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" loading="lazy"><span>React</span></li>
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="" loading="lazy"><span>Vue.js</span></li>
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" alt="" loading="lazy"><span>Angular</span></li>
+                    </ul>
+                </div>
+                <div class="skills-group">
+                    <h3>Back-end e linguagens</h3>
+                    <ul class="tech-list">
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" loading="lazy"><span>Node.js</span></li>
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" alt="" loading="lazy"><span>PHP</span></li>
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt="" loading="lazy"><span>Java</span></li>
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="" loading="lazy"><span>C</span></li>
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" loading="lazy"><span>Python</span></li>
+                    </ul>
+                </div>
+                <div class="skills-group">
+                    <h3>Banco de dados</h3>
+                    <ul class="tech-list">
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="" loading="lazy"><span>MySQL</span></li>
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" loading="lazy"><span>PostgreSQL</span></li>
+                    </ul>
+                </div>
+                <div class="skills-group">
+                    <h3>Ferramentas</h3>
+                    <ul class="tech-list">
+                        <li class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" alt="" loading="lazy"><span>Vite</span></li>
+                    </ul>
+                </div>
             </div>
+        </section>
+
+        <section id="app" class="projetos card" aria-labelledby="projects-title">
+            <div class="section-heading">
+                <p class="section-kicker">Projetos e experiências</p>
+                <h2 id="projects-title">Meus projetos</h2>
+                <p class="section-description">Projetos pessoais e experiências práticas em diferentes áreas do desenvolvimento.</p>
+            </div>
+
+            <div class="lista-projetos">
+                <article v-for="projeto in projetos" :key="projeto.id" class="projeto">
+                    <img :src="projeto.imagem" :alt="'Prévia do projeto ' + projeto.titulo" loading="lazy" decoding="async">
+                    <h3>{{ projeto.titulo }}</h3>
+                    <ul class="tech-tags" :aria-label="'Tecnologias usadas em ' + projeto.titulo">
+                        <li v-for="tecnologia in projeto.tecnologias" :key="tecnologia">{{ tecnologia }}</li>
+                    </ul>
+                    <p>{{ projeto.descricao }}</p>
+                    <div class="botoes-container">
+                        <a v-if="projeto.linkSite" :href="projeto.linkSite" target="_blank" rel="noopener noreferrer" class="botao">Ver site</a>
+                        <a :href="projeto.linkRepo" target="_blank" rel="noopener noreferrer" class="botao botao-secundario">Repositório</a>
+                    </div>
+                </article>
+            </div>
+
+            <section id="mods" class="mods-section" aria-labelledby="mods-title">
+                <div class="section-heading">
+                    <p class="section-kicker">Projetos extras</p>
+                    <h2 id="mods-title">Mods e ferramentas</h2>
+                    <p class="section-description">Projetos que exploram integrações e experiências além de aplicações web.</p>
+                </div>
+                <div class="lista-projetos">
+                    <article v-for="projeto in extras" :key="projeto.id" class="projeto">
+                        <div
+                            v-if="projeto.imagens"
+                            class="project-carousel"
+                            role="region"
+                            aria-roledescription="carrossel"
+                            :aria-label="'Capturas do projeto ' + projeto.titulo"
+                            @mouseenter="projeto.pausado = true"
+                            @mouseleave="retomarCarrossel($event, projeto)"
+                            @focusin="projeto.pausado = true"
+                            @focusout="retomarCarrossel($event, projeto)"
+                        >
+                            <img
+                                :src="projeto.imagens[projeto.imagemAtual].src"
+                                :alt="projeto.imagens[projeto.imagemAtual].alt"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <button class="carousel-control carousel-previous" type="button" :aria-label="'Imagem anterior de ' + projeto.titulo" @click="mudarImagem(projeto, -1)">
+                                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="carousel-control carousel-next" type="button" :aria-label="'Próxima imagem de ' + projeto.titulo" @click="mudarImagem(projeto, 1)">
+                                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                            <div class="carousel-indicators" :aria-label="'Selecionar imagem de ' + projeto.titulo">
+                                <button
+                                    v-for="(imagem, index) in projeto.imagens"
+                                    :key="imagem.src"
+                                    class="carousel-indicator"
+                                    :class="{ active: index === projeto.imagemAtual }"
+                                    type="button"
+                                    :aria-label="'Mostrar imagem ' + (index + 1)"
+                                    :aria-pressed="index === projeto.imagemAtual"
+                                    @click="selecionarImagem(projeto, index)"
+                                ></button>
+                            </div>
+                        </div>
+                        <img
+                            v-else
+                            :src="projeto.imagem"
+                            :alt="'Prévia do projeto ' + projeto.titulo"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                        <h3>{{ projeto.titulo }}</h3>
+                        <ul class="tech-tags" :aria-label="'Tecnologias usadas em ' + projeto.titulo">
+                            <li v-for="tecnologia in projeto.tecnologias" :key="tecnologia">{{ tecnologia }}</li>
+                        </ul>
+                        <p>{{ projeto.descricao }}</p>
+                        <div class="botoes-container">
+                            <a :href="projeto.linkRepo" target="_blank" rel="noopener noreferrer" class="botao botao-secundario">Repositório</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer id="contato" class="contato" aria-labelledby="contact-title">
+        <div class="contact-content">
+            <div>
+                <p class="section-kicker">Vamos conversar?</p>
+                <h2 id="contact-title">Entre em contato</h2>
+                <p>Estou disponível para conversar sobre oportunidades e projetos.</p>
+            </div>
+            <a class="botao" href="mailto:joaogbriellopespereira@hotmail.com">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                joaogbriellopespereira@hotmail.com
+            </a>
         </div>
-    </div>
-    </section>
-    
-   <footer id="contato" class="card">
-        <h2>Contato</h2>
-        <div class="contatos">
-            
-            <div class="contato-item">
-                
-                <a href="mailto:joaogbriellopespereira@hotmail.com" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                    <span>joaogbriellopespereira@hotmail.com</span>
-                </a>
-            </div> 
-        </div>
-        
         <p class="assinatura">Desenvolvido por João Gabriel © 2026</p>
     </footer>
-    
-   
 </body>
 </html>
