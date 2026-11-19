@@ -131,15 +131,33 @@ nav {
     display: inline-flex;
     flex-shrink: 0;
     align-items: center;
+    gap: 10px;
     text-decoration: none;
 }
 
-nav img {
-    display: block;
-    width: auto;
-    max-width: 150px;
-    max-height: 48px;
-    object-fit: contain;
+.logo-mark {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 11px;
+    background: var(--accent-gradient);
+    box-shadow: 0 6px 16px rgba(109, 40, 217, 0.24);
+    color: #fff;
+    font-family: "Sora", "DM Sans", sans-serif;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: -.06em;
+}
+
+.logo-name {
+    color: var(--text);
+    font-family: "Sora", "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -.04em;
+    white-space: nowrap;
 }
 
 nav ul {
@@ -668,10 +686,6 @@ body.light .tech-tags li {
         min-height: 64px;
         gap: 12px;
         padding: 9px 12px;
-    }
-
-    nav img {
-        max-width: 130px;
     }
 
     .menu-icon {
