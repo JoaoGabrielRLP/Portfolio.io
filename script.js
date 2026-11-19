@@ -100,6 +100,15 @@ document.addEventListener("DOMContentLoaded", function () {
                         icones: ["fa-brands fa-html5", "fa-brands fa-css3-alt", "fa-brands fa-typescript", "fa-brands fa-react"],
                         linkSite: "https://joaogabrielrlp.github.io/StreamersChess.com/",
                         linkRepo: "https://github.com/JoaoGabrielRLP/StreamersChess.com"
+                    },
+
+                    {
+                        id: 11,
+                        imagem: "Imagens/NFTMarketplace/Img.svg",
+                        titulo: "NFT Marketplace",
+                        descricao: "Marketplace de NFTs simulado, desenvolvido com React e TypeScript. Permite explorar obras, pesquisar e filtrar o catálogo, favoritar itens, gerenciar o carrinho e concluir pedidos em um fluxo de demonstração sem blockchain ou pagamentos reais.",
+                        icones: ["fa-brands fa-typescript", "fa-brands fa-react", "fa-vite"],
+                        linkRepo: "https://github.com/JoaoGabrielRLP/NFT-MARKETPLACE"
                     }
 
                 ]
