@@ -6,6 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
             return {
                 projetos: [
                     {
+                        id: 12,
+                        imagem: "Imagens/CrudJava/image.png",
+                        titulo: "CRUD de Produtos",
+                        descricao: "Aplicação web em Java para cadastrar, consultar, editar e excluir produtos, com persistência em PostgreSQL.",
+                        tecnologias: ["Java 17", "JSP", "PostgreSQL", "Apache Tomcat 11", "Maven"],
+                        linkSite: "https://java-web-crud-weld.vercel.app/Site/",
+                        linkRepo: "https://github.com/JoaoGabrielRLP/java-web-crud"
+                    },
+                    {
                         id: 11,
                         imagem: "Imagens/NFTMarketplace/Img.png",
                         titulo: "NFT Marketplace",
